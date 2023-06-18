@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') { 
             steps {
-                echo 'build update stage'
+                sh 'maven clean package'
             }
         }
         stage('Deploy') { 
