@@ -6,7 +6,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/sagarfast/student-ui.git'
             }
         }
-        stage('build') { 
+        stage('test') { 
             steps {
                 sh 'mvn clean package'
             }
