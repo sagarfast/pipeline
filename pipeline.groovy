@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-                echo 'pull stage'
+                git branch: 'main', url: 'https://github.com/sagarfast/student-ui.git'
             }
         }
         stage('build') { 
