@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                echo 'deploy update stage'
+                deploy adapters: [tomcat8(credentialsId: 'tomcat-creds-1', path: '', url: 'http://3.143.23.110:8080/')], contextPath: '/', war: '**/*.war'
             }
         }
     }
